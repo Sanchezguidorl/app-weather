@@ -1,0 +1,166 @@
+.pronostico-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#empty-scream{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.523);
+    margin: 0 20px;
+    background-color: #c8edff30;
+    width: 100%;
+    height: 390px;
+}
+
+.card-weatherDay{
+    background-image: linear-gradient(180deg, #4158D0 33%, #70cbff 100%);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px 10px;
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 3px;
+}
+
+.principal-info{
+    display: flex;
+}
+
+
+
+.container-weather-icon{
+    flex-grow: 4;
+}
+
+.container-weather-icon p{
+    padding: 10px 0;
+    border-bottom: 1px solid aliceblue;
+    font-weight: 100;
+}
+
+.container-weather-icon h2{
+    font-size: 35px;
+    border-bottom: 1px solid aliceblue;
+}
+
+.container-weather-icon h2:first-child{
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+.type-temperature{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: 600;
+    padding-bottom: 50px;
+}
+
+.type-temperature p{
+padding:0;
+margin:0;
+font-size: 25px;
+border: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.extended-info{
+    display: flex;
+    border-bottom: 1px solid aliceblue;
+    justify-content: space-around;
+    color: rgb(222, 223, 225);
+    font-size: 10px;
+    padding: 10px 10px;
+    text-align:start;
+}
+.extended-info img{
+    width: 80%;
+}
+
+.extended-info ul{
+   width: 45%;
+}
+
+.extended-info li{
+    word-wrap: break-word;
+    margin-top: 10px;
+    letter-spacing: 0;
+}
+
+.extended-info img{ 
+    max-width: 150px;
+}
+
+.container-week{
+    align-items: center;
+    padding: 20px 0;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    background-image: linear-gradient(180deg, #70cbff 21%, #29b1ff 54%, #4158D0 100%);
+}
+
+.days-week{
+    background-color: #ceedff5e;
+    margin: 5px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height: 145px;
+    text-align: center;
+    width:100%;
+}
+
+.days-week img{
+width: 60px;
+}
+
+@media(min-width:400px){
+    .days-week{
+        width:25%;
+    }
+}
+@media(min-width:650px){
+    .pronostico-container{
+        flex-direction: row;
+        justify-content: center;
+        max-height: 390px;
+        }
+
+    .container-week{
+        width: 60%;   
+        height: 350px;
+        background-image: linear-gradient(90deg, #70cbff 21%, #29b1ff 54%, #4158D0 100%);
+    }
+
+    .card-weatherDay{
+        width: 40%;
+        background-image: linear-gradient(90deg, #4158D0 21%, #29b1ff 54%, #70cbff 100%);
+    }
+
+    .extended-info img{
+        width: 130px !important;
+    }
+}
+
+ .description, h2{
+text-transform:uppercase;
+}
+

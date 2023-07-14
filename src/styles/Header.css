@@ -1,0 +1,43 @@
+.container-selects{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+
+.container-selects select{
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
+@media(min-width: 700px){
+
+    .container-selects{
+        flex-direction: row;
+        justify-content: center;
+        max-width: 700px;
+    }
+    .container-selects select{
+        width: 33%;
+    }
+}
+
+header{
+    width: 100%;
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+}
