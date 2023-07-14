@@ -6,10 +6,9 @@ import PronosticoDia from './Pronostico-Container/PronosticoDia';
 import PronosticoSemana from './Pronostico-Container/PronosticoSemana';
 import '../styles/Pronosticos.css'
 
-
+const apiKey = '40b79bfa70d6cfd677102a09225d5dc3';
 
 function Container() {
-  const apiKey = process.env.API_KEY;
   const [coordenadas, setCoordenadas] = useState('')
   const [weatherNow, setWeatherNow] = useState({})
   const [weatherWeek, setWeatherWeek] = useState({})
