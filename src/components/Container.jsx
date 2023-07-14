@@ -6,8 +6,10 @@ import PronosticoDia from './Pronostico-Container/PronosticoDia';
 import PronosticoSemana from './Pronostico-Container/PronosticoSemana';
 import '../styles/Pronosticos.css'
 
-const apiKey = '40b79bfa70d6cfd677102a09225d5dc3';
+
+
 function Container() {
+  const apiKey = process.env.API_KEY;
   const [coordenadas, setCoordenadas] = useState('')
   const [weatherNow, setWeatherNow] = useState({})
   const [weatherWeek, setWeatherWeek] = useState({})
@@ -20,7 +22,7 @@ function Container() {
         const nombreCiudad = coordenadas.nombre
         setWeatherNow({ ...weatherNow.data, nombreCiudad })
       } catch (error) {
-        console.log('Error en el fetch de datos: ' + error);
+        console.log('Error en al realizar consulta de datos: ' + error);
       }
     }
 
@@ -29,7 +31,7 @@ function Container() {
         const weatherWeek = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${coordenadas.lat}&lon=${coordenadas.lon}&units=metric&lang=sp&appid=${apiKey}`)
         setWeatherWeek({ ...weatherWeek.data })
       } catch (error) {
-        console.log('Error en el fetch de datos: ' + error);
+        console.log('Error en al realizar consulta de datos: ' + error);
       }
     }
     if (coordenadas !== '') {
@@ -45,12 +47,12 @@ function Container() {
       <Header selectCoordenadas={(coor) => { setCoordenadas(coor) }} />
 
       {coordenadas ?
-                  <section className="pronostico-container">
-                  <PronosticoDia weatherNow={weatherNow} loading={loading}/>
-                  <div className="container-week">
-                  <PronosticoSemana weatherWeek={weatherWeek} loading={loading} setLoading={setLoading}/>
-                  </div>
-                  </section>
+        <section className='pronostico-container'>
+          <PronosticoDia weatherNow={weatherNow} loading={loading} />
+          <div className='container-week'>
+            <PronosticoSemana weatherWeek={weatherWeek} loading={loading} setLoading={setLoading} />
+          </div>
+        </section>
         :
         <div id='empty-scream'>
           <h1>Selecciona una ubicación para visualizar el clima</h1>
