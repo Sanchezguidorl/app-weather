@@ -91,7 +91,7 @@ function Header ({ selectCoordenadas }) {
   return (
     <header>
       <div className='logo-container'>
-      <img src='../assets/solIcon.png' alt="Logo de la página" width='80' />
+      <img src='/assets/solIcon.png' alt="Logo de la página" width='80' />
       <h1>ArgentWeather</h1>
       </div>
       <div className="container-selects">
